@@ -1,0 +1,10 @@
+from etl import ler_csv
+from etl import filtrar_produtos_nao_entregues
+from etl import somar_valores_dos_produtos
+
+path_arquivo = "vendas.csv"
+
+lista_de_produtos = ler_csv(path_arquivo)
+produtos_entregues = filtrar_produtos_nao_entregues(lista_de_produtos)
+valor_dos_produtos_entregues = somar_valores_dos_produtos(produtos_entregues)
+print(valor_dos_produtos_entregues)
